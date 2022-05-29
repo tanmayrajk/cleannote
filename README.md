@@ -30,8 +30,8 @@ That's it, now you can move onto Installation.
 
 On Chrome:
 ```
-  Click the three dots in the top-right corner of the window.
-  Go to 'Extensions'.
+  Click the puzzle icon in the top-right corner of the window.
+  Click on 'Manage Extensions'.
   Click on 'Load Unpacked' option in the top-left corner of the window.
   Choose the 'Chrome' folder from the extension folder.
 ```

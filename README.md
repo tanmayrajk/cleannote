@@ -5,6 +5,8 @@
 
 a minimal note-taking extension for chrome and firefox ✨
 
+![Screenshot](screenshot.png)
+
 ## ⚠️ Before Installation
 
 cleannote uses [Pantry](getpantry.cloud) for its database. So to use cleannote you need to first create a database on Pantry.

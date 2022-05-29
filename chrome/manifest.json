@@ -1,6 +1,6 @@
 {
     "name": "cleannote",
-    "description": "a minimal note taking extension with sync.",
+    "description": "a minimal note-taking extension with sync.",
     "version": "1.0",
     "manifest_version": 3,
     "background": {

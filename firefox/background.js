@@ -1,5 +1,6 @@
+const PANTRYID = ""
+
 let input
-const PANTRYID = 'bc3879a8-1b91-4de8-9944-3b431f798331'
 
 async function putBasketContents(pantryID, basket, data = {}) {
     let response = await fetch(`https://getpantry.cloud/apiv1/pantry/${pantryID}/basket/${basket}`, {

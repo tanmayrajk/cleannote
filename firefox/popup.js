@@ -1,9 +1,10 @@
+const PANTRYID = ""
+
 const textareaEl = document.getElementById('inputBox')
 const copyBtnEl = document.getElementById('copyBtn')
 const exportBtnEl = document.getElementById('exportBtn')
 const clearBtnEl = document.getElementById('clearBtn')
 
-const PANTRYID = 'bc3879a8-1b91-4de8-9944-3b431f798331'
 let inputText
 
 textareaEl.value = 'loading...'

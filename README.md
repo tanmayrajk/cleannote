@@ -43,4 +43,4 @@ On Firefox:
 
 ## 🎫 License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/tanmayrajk/cleannote-extension/blob/main/LICENSE)

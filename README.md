@@ -1,5 +1,5 @@
 
-# 📄 cleannote [![MIT License](https://img.shields.io/badge/license-mit-green.svg?style=for-the-badge)](https://github.com/tanmayrajk/cleannote-extension/blob/main/LICENSE)[![SHIT Code Quality](https://img.shields.io/badge/code_quality-shit-red?style=for-the-badge)](https://img.shields.io/badge/code_quality-shit-red?style=for-the-badge)
+# 📄 cleannote [![MIT License](https://img.shields.io/badge/license-mit-green.svg?style=for-the-badge)](https://github.com/tanmayrajk/cleannote-extension/blob/main/LICENSE) [![SHIT Code Quality](https://img.shields.io/badge/code_quality-shit-red?style=for-the-badge)](https://img.shields.io/badge/code_quality-shit-red?style=for-the-badge)
 
 a minimal note-taking extension for chrome and firefox ✨
 

@@ -33,30 +33,27 @@ async function getBasketContents(pantryID, basket) {
     return response
 }
 
-chrome.runtime.onInstalled.addListener(() => {
-    postBasketContents(PANTRYID, 'betternote', {})
-        .then(() => {
-            getBasketContents(PANTRYID, 'betternote')
-            .then(response => {
-                if (response.input != undefined) {
-                    input = response.input
-                } else {
-                    input = ''
-                }
-                console.log(input)
-            })
+browser.runtime.onInstalled.addListener(() => {
+    getBasketContents(PANTRYID, 'betternote').then(response => {
+        if (response.input != undefined) input = response.input
+        else input = response.input
+    })
+    .catch(error => {
+        postBasketContents(PANTRYID, 'betternote', {}).then(() => {
+            input = ''
         })
+    })
 
 })
 
-chrome.runtime.onConnect.addListener(function (port) {
+browser.runtime.onConnect.addListener(function (port) {
     console.assert(port.name === "betternote")
     port.onDisconnect.addListener(function () {
         putBasketContents(PANTRYID, 'betternote', {input})
     })
 })
 
-chrome.runtime.onConnect.addListener(function(port) {
+browser.runtime.onConnect.addListener(function(port) {
     console.assert(port.name === "betternote")
     port.onMessage.addListener(function(msg) {
         input = msg

@@ -1,5 +1,7 @@
 const textareaEl = document.getElementById('inputBox')
 const copyBtnEl = document.getElementById('copyBtn')
+const exportBtnEl = document.getElementById('exportBtn')
+const clearBtnEl = document.getElementById('clearBtn')
 
 const PANTRYID = 'bc3879a8-1b91-4de8-9944-3b431f798331'
 let inputText
@@ -20,7 +22,7 @@ getBasketContents(PANTRYID, 'betternote')
             textareaEl.disabled = false
             textareaEl.focus
         }
-})
+    })
     .catch(error => {
         textareaEl.disabled = true
         textareaEl.value = "Failed to fetch your notes. Check your internet connection or PantryID and open the extension again."
@@ -32,7 +34,7 @@ async function getBasketContents(pantryID, basket) {
     if (!response.ok) {
         const message = `An error has occured: ${response.status}`;
         throw new Error(message);
-    }    
+    }
     response = await response.json()
     return response
 }
@@ -59,7 +61,7 @@ async function postBasketContents(pantryID, basket, data = {}) {
     return response.json
 }
 
-let port = chrome.runtime.connect({name: "betternote"})
+let port = browser.runtime.connect({ name: "betternote" })
 
 textareaEl.addEventListener('input', () => {
     inputText = textareaEl.value
@@ -71,8 +73,31 @@ copyBtnEl.addEventListener('click', () => {
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
-    // alert("Copied the text: " + copyText.value);
     copyBtnEl.innerText = "copied!"
     setTimeout(() => copyBtnEl.innerText = "copy", 1000)
-    
+
+})
+
+exportBtnEl.addEventListener('click', () => {
+    let today = new Date()
+    let date = today.getDate()
+    let month = today.getMonth() + 1
+    let year = today.getFullYear()
+
+    let a = document.createElement("a");
+    document.body.appendChild(a);
+    a.style = "display: none";
+    let blob = new Blob([textareaEl.value], { type: "text/plain" })
+    url = window.URL.createObjectURL(blob);
+    a.href = url
+    a.download = `cleannote-export-${date}-${month}-${year}.txt`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+})
+
+clearBtnEl.addEventListener('click', () => {
+    textareaEl.value = ''
+    inputText = textareaEl.value
+    port.postMessage(inputText)
+    textareaEl.focus()
 })

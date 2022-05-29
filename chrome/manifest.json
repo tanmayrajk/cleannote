@@ -1,13 +1,16 @@
 {
-    "name": "betternote",
-    "description": "a way to quickly take notes while browsing.",
+    "name": "cleannote",
+    "description": "a simple way to quickly take notes while browsing.",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
         "service_worker": "background.js"
     },
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+            "128": "icons/512x512.png"
+        }
     },
     "commands": {
         "_execute_action": {
@@ -15,6 +18,8 @@
                 "default": "Ctrl + Shift + L"
             }
         }
+    },
+    "icons": {
+        "128": "icons/512x512.png"
     }
 }
-

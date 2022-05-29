@@ -35,7 +35,7 @@ textarea {
     outline: none;
     border: none;
     line-height: 1.5;
-    font-family: 'JetBrains Mono', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 #btnsContainer {
@@ -46,25 +46,33 @@ textarea {
     outline: none;
     border: none;
     padding: 10px;
-    font-family: 'JetBrains Mono', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     margin-right: 10px;
     cursor: pointer;
     transition: 200ms;
     font-weight: 600;
 }
 
-#fetchBtn {
+#exportBtn {
     background-color: #f4b593;
+}
+
+#exportBtn:hover, #exportBtn:active {
+    background-color: #f5a97f;
 }
 
 #copyBtn {
     background-color: #7dc4e4;
 }
 
-#fetchBtn:hover, #fetchBtn:active {
-    background-color: #f5a97f;
-}
-
 #copyBtn:hover, #copyBtn:active {
     background-color: #8aadf4;
+}
+
+#clearBtn {
+    background-color: #ee99a0;
+}
+
+#clearBtn:hover, #clearBtn:active {
+    background-color: #ed8796;
 }

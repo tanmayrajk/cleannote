@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #0000003e;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #494d64;
+}
+::-webkit-scrollbar-thumb {
+    background: #6e738d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #263a4f;
+    cursor: pointer;
+}
+
+body {
+    padding: 20px;
+    background-color: #181926;
+}
+
+textarea {
+    padding: 10px;
+    resize: none;
+    background-color: #24273a;
+    color: #c5cff5;
+    outline: none;
+    border: none;
+    line-height: 1.5;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+#btnsContainer {
+    margin-top: 10px;
+}
+
+.btns {
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 200ms;
+    font-weight: 600;
+}
+
+#exportBtn {
+    background-color: #f4b593;
+}
+
+#copyBtn {
+    background-color: #7dc4e4;
+}
+
+#exportBtn:hover, #exportBtn:active {
+    background-color: #f5a97f;
+}
+
+#copyBtn:hover, #copyBtn:active {
+    background-color: #8aadf4;
+}

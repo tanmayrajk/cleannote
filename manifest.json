@@ -1,0 +1,20 @@
+{
+    "name": "betternote",
+    "description": "a way to quickly take notes while browsing.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl + Shift + L"
+            }
+        }
+    }
+}
+

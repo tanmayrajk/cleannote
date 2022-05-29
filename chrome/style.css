@@ -57,14 +57,22 @@ textarea {
     background-color: #f4b593;
 }
 
-#copyBtn {
-    background-color: #7dc4e4;
-}
-
 #exportBtn:hover, #exportBtn:active {
     background-color: #f5a97f;
 }
 
+#copyBtn {
+    background-color: #7dc4e4;
+}
+
 #copyBtn:hover, #copyBtn:active {
     background-color: #8aadf4;
+}
+
+#clearBtn {
+    background-color: #ee99a0;
+}
+
+#clearBtn:hover, #clearBtn:active {
+    background-color: #ed8796;
 }
